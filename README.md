@@ -1,1 +1,2 @@
-# mslearn-knowledge-mining.id-id
+# mslearn-knowledge-mining
+File lab untuk modul Penggalian Pengetahuan Azure AI
