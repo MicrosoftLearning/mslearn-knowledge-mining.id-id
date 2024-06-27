@@ -68,7 +68,7 @@ Jika Belum memilikinya di langganan, Anda harus menyediakan sumber daya **Layana
 
 Anda akan mengembangkan aplikasi pencarian menggunakan Visual Studio Code. File kode untuk aplikasi Anda telah disediakan di repositori GitHub.
 
-> **Tips**: Jika Anda telah mengkloning repositori **mslearn-knowledge-mining**, buka di Visual Studio Code. Atau, ikuti langkah-langkah ini untuk mengkloningnya ke lingkungan pengembangan Anda.
+> **Tips**: Jika Anda sudah mengkloning repositori **mslearn-knowledge-mining**, buka di Visual Studio Code. Atau, ikuti langkah-langkah ini untuk mengkloningnya ke lingkungan pengembangan Anda.
 
 1. Memulai Visual Studio Code.
 1. Buka palet (SHIFT+CTRL+P) dan jalankan **Git: Perintah klon** untuk mengkloning repositori `https://github.com/MicrosoftLearning/mslearn-knowledge-mining` ke folder lokal (tidak masalah folder mana).
@@ -143,7 +143,7 @@ Sekarang setelah Anda memiliki dokumen, Anda dapat membuat solusi pencarian deng
     | metadata_author | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | locations | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
     | frasa kunci | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
-    | bahasa | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | |
+    | bahasa | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; | | | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10004; |
 
 10. Periksa kembali pilihan Anda, dengan memberikan perhatian khusus untuk memastikan bahwa opsi **Dapat diambil kembali**, **Dapat Difilter**, **Dapat Diurutkan**, **Dapat Dilihat**, dan **Dapat dicari** dipilih untuk setiap bidang (mungkin sulit untuk mengubahnya nanti). Kemudian lanjutkan ke langkah berikutnya (*Buat pengindeks*).
 11. Ubah **Nama pengindeks** menjadi **margies-indexer**.
