@@ -28,7 +28,7 @@ Anda akan mengembangkan aplikasi pencarian menggunakan Visual Studio Code. File 
 > **Catatan**: Jika sebelumnya Anda telah menyelesaikan latihan **[Membuat solusi Pencarian Azure AI](01-azure-search.md)**, dan masih memiliki sumber daya Azure ini dalam langganan, Anda dapat melewati bagian ini dan mulai dari bagian **Membuat solusi pencarian**. Jika tidak, ikuti langkah-langkah di bawah ini untuk menyediakan sumber daya Azure yang diperlukan.
 
 1. Di browser web, buka portal Microsoft Azure di `https://portal.azure.com`, dan masuk menggunakan akun Microsoft yang terkait dengan langganan Azure Anda.
-2. Di bilah pencarian teratas, cari *layanan Azure AI*, pilih **Layanan Azure AI**, dan buat sumber daya akun multi-layanan layanan Azure AI dengan pengaturan berikut:
+2. Di bilah pencarian teratas, cari *layanan Azure AI*, pilih **akun multi layanan dari Layanan Azure AI**, dan buat sumber daya akun multi-layanandari  layanan Azure AI dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*
     - **Grup sumber daya**: *Pilih atau buat grup sumber daya (jika Anda menggunakan langganan terbatas, Anda mungkin tidak memiliki izin untuk membuat grup sumber daya baru - gunakan yang disediakan)*
     - **Wilayah**: *Pilih wilayah yang tersedia yang secara geografis dekat dengan Anda*
@@ -371,6 +371,13 @@ Sekarang Anda memiliki indeks, Anda dapat mencarinya.
     ```
 
     Kueri ini mengambil bidang **url** dan **top_words** untuk semua dokumen yang menyebutkan *Las Vegas*.
+
+## Hapus sumber daya latihan
+
+Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Menghapus sumber daya Azure:
+
+1. Di portal Microsoft Azure, pilih **Grup sumber daya**.
+1. Pilih grup sumber daya yang tidak Anda perlukan lagi, lalu pilih **Hapus grup sumber daya**.
 
 ## Informasi selengkapnya
 
