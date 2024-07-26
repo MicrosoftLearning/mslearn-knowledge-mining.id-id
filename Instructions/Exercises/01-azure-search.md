@@ -95,7 +95,7 @@ Sekarang setelah Anda memiliki sumber daya yang diperlukan, Anda dapat mengungga
 5. Masukkan perintah berikut untuk menjalankan file batch. Perintah ini akan membuat kontainer blob di akun penyimpanan Anda dan mengunggah dokumen di folder **data** ke dalamnya.
 
     ```powershell
-    UploadDocs
+    .\UploadDocs.cmd
     ```
 
 ## Mengindeks dokumen
@@ -153,7 +153,7 @@ Sekarang setelah Anda memiliki dokumen, Anda dapat membuat solusi pencarian deng
     1. Mengekstrak bidang dan konten metadata dokumen dari sumber data
     2. Menjalankan set kemampuan dari kemampuan kognitif untuk menghasilkan bidang tambahan yang diperkaya
     3. Memetakan bidang yang diekstraksi ke indeks.
-15. Di bagian bawah halaman **Gambaran Umum** untuk sumber daya Pencarian Azure AI Anda, lihat tab **Pengindeks**, yang akan menampilkan **margies-indexer** yang baru dibuat. Tunggu beberapa menit, dan klik **&orarr; Refresh** hingga **Status** menunjukkan keberhasilan.
+15. Di sisi kiri, lihat halaman **Pengindeks**, yang harus menampilkan margies-indexer ** yang baru dibuat**. Tunggu beberapa menit, dan klik **&orarr; Refresh** hingga **Status** menunjukkan keberhasilan.
 
 ## Cari indeks
 
