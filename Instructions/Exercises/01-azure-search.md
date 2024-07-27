@@ -39,7 +39,7 @@ Solusi yang akan Anda buat untuk Margie's Travel memerlukan sumber daya berikut 
 
 Jika Belum memilikinya di langganan, Anda harus menyediakan sumber daya **Layanan Azure AI**. Solusi pencarian Anda akan menggunakan ini untuk memperkaya data di datastore dengan wawasan yang dihasilkan AI.
 
-1. Kembali ke beranda portal Microsoft Azure, lalu pilih **&#65291; Buat tombol** sumber daya, cari *Layanan Azure AI*, dan buat sumber daya **Layanan Azure AI** dengan pengaturan berikut:
+1. Kembali ke beranda portal Azure, lalu pilih **&#65291; Buat tombol** sumber daya, cari *Layanan Azure AI*, dan buat sumber daya **akun multi-layanan Azure AI** dengan pengaturan berikut:
     - **Langganan**: *Langganan Azure Anda*
     - **Grup sumber daya**: *Grup sumber daya yang sama dengan sumber daya Pencarian Azure AI Anda*
     - **Wilayah**: *Lokasi yang sama dengan sumber daya Pencarian Azure AI Anda*
@@ -95,7 +95,7 @@ Sekarang setelah Anda memiliki sumber daya yang diperlukan, Anda dapat mengungga
 5. Masukkan perintah berikut untuk menjalankan file batch. Perintah ini akan membuat kontainer blob di akun penyimpanan Anda dan mengunggah dokumen di folder **data** ke dalamnya.
 
     ```powershell
-    UploadDocs
+    .\UploadDocs.cmd
     ```
 
 ## Mengindeks dokumen
@@ -153,7 +153,7 @@ Sekarang setelah Anda memiliki dokumen, Anda dapat membuat solusi pencarian deng
     1. Mengekstrak bidang dan konten metadata dokumen dari sumber data
     2. Menjalankan set kemampuan dari kemampuan kognitif untuk menghasilkan bidang tambahan yang diperkaya
     3. Memetakan bidang yang diekstraksi ke indeks.
-15. Di bagian bawah halaman **Gambaran Umum** untuk sumber daya Pencarian Azure AI Anda, lihat tab **Pengindeks**, yang akan menampilkan **margies-indexer** yang baru dibuat. Tunggu beberapa menit, dan klik **&orarr; Refresh** hingga **Status** menunjukkan keberhasilan.
+15. Di sisi kiri, lihat halaman **Pengindeks**, yang harus menampilkan margies-indexer ** yang baru dibuat**. Tunggu beberapa menit, dan klik **&orarr; Refresh** hingga **Status** menunjukkan keberhasilan.
 
 ## Cari indeks
 
@@ -460,6 +460,13 @@ Aplikasi web sudah menyertakan kode untuk memproses dan merender hasil pencarian
     - **pencakar langit** (perhatikan bahwa kata ini tidak muncul dalam konten sebenarnya dari dokumen apa pun, tetapi ditemukan dalam *teks gambar* dan *tag gambar* yang dibuat untuk gambar dalam beberapa dokumen).
     - **Gurun Mojave** (perhatikan bahwa istilah ini diidentifikasi sebagai *lokasi* di beberapa dokumen).
 10. Tutup tab browser yang berisi situs web Margie's Travel dan kembali ke Visual Studio Code. Kemudian di terminal Python untuk folder **margies-travel** (tempat aplikasi dotnet atau flask berjalan), masukkan Ctrl+C untuk menghentikan aplikasi.
+
+## Hapus sumber daya latihan
+
+Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Menghapus sumber daya Azure:
+
+1. Di portal Microsoft Azure, pilih **Grup sumber daya**.
+1. Pilih grup sumber daya yang tidak Anda perlukan lagi, lalu pilih **Hapus grup sumber daya**.
 
 ## Informasi selengkapnya
 

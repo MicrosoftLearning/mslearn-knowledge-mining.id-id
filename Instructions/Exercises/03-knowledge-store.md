@@ -216,6 +216,13 @@ Proyeksi *tabel* yang ditentukan dalam kumpulan keterampilan membentuk skema rel
 
 Kemampuan untuk membuat proyeksi *table* memungkinkan Anda membangun solusi analitis dan pelaporan yang mengkueri skema relasional seperti misalnya menggunakan Microsoft Power BI. Kolom kunci yang dibuat secara otomatis dapat digunakan untuk menggabungkan tabel dalam kueri - misalnya untuk mengembalikan semua lokasi yang disebutkan dalam dokumen tertentu.
 
+## Hapus sumber daya latihan
+
+Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Menghapus sumber daya Azure:
+
+1. Di portal Microsoft Azure, pilih **Grup sumber daya**.
+1. Pilih grup sumber daya yang tidak Anda perlukan lagi, lalu pilih **Hapus grup sumber daya**.
+
 ## Informasi selengkapnya
 
 Untuk mempelajari selengkapnya tentang pembuatan penyimpanan pengetahuan dengan Pencarian Azure AI, lihat [dokumentasi Pencarian Azure AI](https://docs.microsoft.com/azure/search/knowledge-store-concept-intro).
