@@ -37,7 +37,7 @@ Untuk menghemat waktu Anda, pilih template Azure ARM ini untuk membuat sumber da
 1. Pilih **Tinjau + buat**.
 1. Pilih **Buat**.
 
-    > **Catatan** Ada kesalahan yang ditampilkan, **Anda harus Menyetujui persyaratan layanan di bawah ini agar berhasil membuat sumber daya ini. **, dengan memilih **Buat** maka Anda menyetujuinya.
+    > **Catatan** Ada kesalahan yang ditampilkan, **Anda harus Menyetujui persyaratan layanan di bawah ini agar berhasil membuat sumber daya ini. **, dengan memilih **Buat** berarti Anda menyetujui persyaratan tersebut.
 
 1. Pilih **Buka grup sumber daya** untuk melihat semua sumber daya yang telah Anda buat.
 
@@ -92,7 +92,7 @@ Latihan ini menggunakan 210 file teks yang berisi ringkasan plot untuk sebuah fi
 
 ### Buat sumber daya bahasa
 
-1. Pada tautan remah roti di bagian atas halaman, pilih **Beranda**.
+1. Pada tautan navigasi di bagian atas halaman, pilih **Beranda**.
 1. Pilih **+ Buat sumber daya**, dan cari *Layanan bahasa*.
 1. Pilih **Buat** di bagian **Layanan Bahasa**.
 1. Pilih opsi yang menyertakan **Klasifikasi teks kustom dan Pengenalan entitas bernama kustom**.
@@ -143,7 +143,7 @@ Latihan ini menggunakan 210 file teks yang berisi ringkasan plot untuk sebuah fi
 
 1. Di sebelah kiri, pilih **Pekerjaan pelatihan**.
 
-    ![Cuplikan layar yang menunjukkan cara membuat ke pekerjaan pelatihan.](../media/04-media/train-jobs.png)
+    ![Cuplikan layar yang menunjukkan cara membuat pekerjaan pelatihan.](../media/04-media/train-jobs.png)
 
 1. Pilih **+ Mulai pekerjaan pelatihan**.
 
@@ -294,13 +294,13 @@ Aplikasi fungsi harus terhubung ke model klasifikasi teks kustom Anda. Ikuti lan
  
 1. Tekan **CTRL**+**S** untuk menyimpan **perubahan local.settings.json** Anda.
 1. Di navigasi kiri, pilih ekstensi **Azure**.
-1. Perluas **Sumber Daya**, da di bagian langganan Anda, perluas **Aplikasi Fungsi**, lalu klik kanan **Pengaturan Aplikasi**, pilih **Unggah Pengaturan Lokal**.
+1. Perluas **Sumber Daya**, dan di bagian langganan Anda, perluas **Aplikasi Fungsi**, lalu klik kanan **Pengaturan Aplikasi**, pilih **Unggah Pengaturan Lokal**.
 
 ### Uji aplikasi fungsi jarak jauh Anda
 
 Ada contoh kueri yang dapat Anda gunakan untuk menguji apakah aplikasi fungsi dan model pengklasifikasi berfungsi dengan benar.
 
-1. Di sebelah kiri, pilih **Penjelajah**, perluas folder **customtextcla**, lalu pilih **sample.dat**.
+1. Di sebelah kiri, pilih **Explorer**, perluas folder **customtextcla**, lalu pilih **sample.dat**.
 
     ![Cuplikan layar memperlihatkan sampel kueri JSON.](../media/04-media/copy-sample-query.png)
 1. Salin isi file.
