@@ -13,7 +13,7 @@ Dalam latihan ini, Anda akan menambahkan pemeringkat semantik ke indeks dan meng
 
 1. Buka portal Azure dan masuk.
 1. Pilih **Semua sumber daya** dan pilih layanan pencarian Anda.
-1. Di panel navigasi, pilih **Pemeringkat semantik (pratinjau)**.
+1. Di panel navigasi, pilih **Pemeringkat semantik**.
 1. Di **Ketersediaan**, dalam opsi **Gratis**, pilih **Pilih Paket**.
 
 ![Cuplikan layar kotak dialog pemeringkat semantik.](../media/semantic-search/semanticsearch.png)

@@ -56,7 +56,7 @@ Jika Belum memilikinya di langganan, Anda harus menyediakan sumber daya **Layana
     - **Nama akun penyimpanan**: *Masukkan nama yang unik*
     - **Wilayah**: *Pilih wilayah yang tersedia*
     - **Performa**: Standar
-    - **Replikasi**: Penyimpanan yang berlebihan secara lokal (LRS)
+    - **Redundansi**: Penyimpanan redundan secara lokal (LRS)
     - Pada tab **Tingkat Lanjut**, centang kotak di samping *Izinkan mengaktifkan akses anonim pada kontainer individual*
 2. Tunggu hingga penyebaran selesai, lalu buka sumber daya yang disebarkan.
 3. Pada halaman **Ringkasan**, perhatikan **ID Langganan** -ini menunjukkan langganan yang menyediakan akun penyimpanan.
@@ -231,7 +231,7 @@ Meskipun Anda dapat menggunakan portal untuk membuat dan memodifikasi solusi pen
 1. Di portal Microsoft Azure, kembali ke halaman **Gambaran Umum** untuk sumber daya Pencarian Azure AI Anda; dan di bagian atas halaman, temukan **Url** untuk sumber daya Anda (yang terlihat seperti **https://resource_name.search.windows.net**) dan salin ke clipboard.
 2. Di Visual Studio Code, di panel Penjelajah, perluas folder **01-azure-search** dan subfolder **pencarian modifikasi**, dan pilih **modify-search.cmd** untuk membukanya. Anda akan menggunakan file skrip ini untuk menjalankan perintah *cURL* yang mengirimkan JSON ke antarmuka Layanan Azure AI REST.
 3. Di **modify-search.cmd**, ganti wadah penampung **YOUR_SEARCH_URL** dengan URL yang Anda salin ke clipboard.
-4. Di portal Azure, lihat halaman **Kunci** untuk sumber daya Pencarian Azure AI Anda, dan salin **Kunci admin utama** ke clipboard.
+4. Di portal Azure, di bagian **Pengaturan** , lihat halaman **Kunci** untuk sumber daya Pencarian Azure AI Anda dan salin **Kunci admin utama** ke papan klip.
 5. Di Visual Studio Code, ganti wadah penampung **YOUR_ADMIN_KEY** dengan kunci yang Anda salin ke clipboard.
 6. Simpan perubahan ke **modify-search.cmd** (tetapi jangan jalankan dulu!)
 
@@ -239,7 +239,7 @@ Meskipun Anda dapat menggunakan portal untuk membuat dan memodifikasi solusi pen
 
 1. Di Visual studio Code, di folder **modify-search**, buka **skillset.json**. Cara ini menunjukkan definisi JSON untuk **margies-skillset**.
 2. Di bagian atas definisi set keterampilan, perhatikan objek **cognitiveServices**, yang digunakan untuk menyambungkan sumber daya Layanan Azure AI Anda ke set keterampilan.
-3. Di portal Microsoft Azure, buka sumber daya Layanan Azure AI Anda (<u>tidak</u> sumber daya Azure AI Search Anda!) dan lihat halaman **Kunci**. Kemudian salin **Kunci 1** ke clipboard.
+3. Di portal Azure, buka sumber daya Layanan Azure AI Anda (<u>bukan</u> sumber daya Pencarian Azure AI Anda!) dan di bagian **Manajemen Sumber Daya**, lihat halaman **Kunci dan Endpoint**. Kemudian salin **KUNCI 1** ke papan klip.
 4. Di Visual Studio Code, di **skillset.json**, ganti tempat penampung **YOUR_COGNITIVE_SERVICES_KEY** dengan kunci Layanan Azure AI yang Anda salin ke clipboard.
 5. Gulir file JSON, perhatikan bahwa file tersebut menyertakan definisi untuk keterampilan yang Anda buat menggunakan antarmuka pengguna Pencarian Azure AI di portal Microsoft Azure. Di bagian bawah daftar keterampilan, keterampilan tambahan telah ditambahkan dengan definisi berikut:
 
@@ -375,13 +375,13 @@ Sekarang Anda memiliki indeks yang berguna, Anda dapat menggunakannya dari aplik
     **C#**
 
     ```
-    dotnet add package Azure.Search.Documents --version 11.1.1
+    dotnet add package Azure.Search.Documents --version 11.6.0
     ```
 
     **Python**
 
     ```
-    pip install azure-search-documents==11.0.0
+    pip install azure-search-documents==11.5.1
     ```
 
 3. Lihat konten folder **margies-travel**, dan perhatikan bahwa folder tersebut berisi file untuk pengaturan konfigurasi:
@@ -461,7 +461,7 @@ Aplikasi web sudah menyertakan kode untuk memproses dan merender hasil pencarian
     - **Gurun Mojave** (perhatikan bahwa istilah ini diidentifikasi sebagai *lokasi* di beberapa dokumen).
 10. Tutup tab browser yang berisi situs web Margie's Travel dan kembali ke Visual Studio Code. Kemudian di terminal Python untuk folder **margies-travel** (tempat aplikasi dotnet atau flask berjalan), masukkan Ctrl+C untuk menghentikan aplikasi.
 
-## Hapus sumber daya latihan
+## Pembersihan
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Menghapus sumber daya Azure:
 

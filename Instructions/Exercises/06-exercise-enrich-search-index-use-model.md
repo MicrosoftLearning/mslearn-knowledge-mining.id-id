@@ -54,6 +54,7 @@ Anda kini akan membuat model regresi dan melatihnya menggunakan alur Azure AI Ma
 
     ![Cuplikan layar yang memperlihatkan alur tampak benar, dan tombol Kirim disorot.](../media/06-media/submit-pipeline.png)
 1. Pilih **Dasar** di panel **Siapkan pekerjaan alur**.
+   > Catatan: Jika Anda menyembunyikan panel **Siapkan alur pekerjaan** sebelumnya, Anda dapat membukanya lagi dengan memilih **Konfigurasi & Kirim**.
 1. Pilih **Buat baru** pada nama Eksperimen.
 1. Pada **Nama eksperimen baru**, masukkan **linear-regression-training**.
 1. Pilih **Tinjau + Kirim** , lalu pilih **Kirim**.
@@ -175,7 +176,7 @@ Kluster inferensi Anda kini seharusnya siap digunakan. Anda juga telah mengedit 
 1. Pilih **Sebarkan**, lalu pilih **Titik akhir real time**.
 
     ![Cuplikan layar panel Pilih titik akhir.](../media/06-media/04-select-endpoint.png)
-1. Untuk **Nama**, masukkan nama unik, misalnya **car-evaluation-endpoint-1440637584** .
+1. Untuk **Nama endpoint**, masukkan nama unik, misalnya **car-evaluation-endpoint-1440637584** .
 1. Untuk **Tipe komputasi**, pilih **Terkelola**.
 1. Untuk **Tipe autentikasi**, pilih **Autentikasi berbasis kunci**.
 1. Pilih **Berikutnya**, lalu pilih **Berikutnya**.
@@ -252,7 +253,7 @@ Selanjutnya, Anda membuat layanan Cognitive Search baru dan memperkaya indeks me
 
     ![Cuplikan layar yang memperlihatkan pemilihan akun penyimpanan di portal Azure.](../media/06-media/navigate-storage-account.png)
 1. Pilih akun penyimpanan, misalnya **amlforacsworks1440637584**.
-1. Pilih **Konfigurasi** pada **Pengaturan**. Kemudian, atur **Izinkan akses anonim Blob** ke **Diaktifkan**.
+1. Pilih **Konfigurasi** pada **Pengaturan**. Kemudian atur **Izinkan akses anonim Blob** menjadi **Diaktifkan**.
 1. Pilih **Simpan**.
 1. Di bawah **Penyimpanan data**, pilih **Kontainer**. 
 1. Buat kontainer baru untuk menyimpan data indeks, pilih **+ Kontainer**.
@@ -461,7 +462,7 @@ Anda kini perlu mengganti pengayaan nama orang dengan set keterampilan kustom Az
 
 ### Memperbarui pemetaan bidang output
 
-1. Kembali ke panel **Gambaran umum**, dan pilih **pengindeks**, lalu pilih **azureblob-indexer**.
+1. Kembali ke panel **Ringkasan** layanan pencarian Anda dan pilih **Pengindeks**, lalu pilih **azureblob-indexer**.
 1. Pilih tab **Definisi Pengindeks (JSON)**, lalu ubah nilai **outputFieldMappings** menjadi:
 
     ```json
@@ -485,9 +486,9 @@ Set ketrampilan yang diperbarui kini akan menambahkan nilai prediksi ke dokumen 
 1. Pilih **Telusuri**.
 1. Gulir ke bagian bawah hasil.
     ![Cuplikan layar yang memperlihatkan bidang prediksi harga mobil yang ditambahkan ke hasil pencarian.](../media/06-media/test-results-search-explorer.png)
-Anda akan melihat kolom `predicted_price` yang sudah terisi.
+Anda akan melihat bidang yang sudah terisi `predicted_price`
 
-## Hapus sumber daya latihan
+## Pembersihan
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Menghapus sumber daya Azure:
 
