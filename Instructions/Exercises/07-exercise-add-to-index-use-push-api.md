@@ -162,7 +162,7 @@ Anda dapat mencari dan memverifikasi bahwa dokumen telah ditambahkan ke indeks d
 
 ![Cuplikan layar yang menampilkan indeks pencarian dengan 100.000 dokumen.](../media/07-media/check-search-service-index.png)
 
-### Hapus sumber daya latihan
+### Pembersihan
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Mulailah dengan kode yang dikloning ke mesin Anda. Kemudian hapus sumber daya Azure.
 

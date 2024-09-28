@@ -114,10 +114,10 @@ Pengindeks sekarang akan mulai menyerap 50 dokumen. Namun, jika Anda memeriksa s
     ![Cuplikan layar yang menunjukkan masalah diselesaikan.](../media/08-media/error-fixed.png)
 1. Pilih **OK**.
 
-1. Sekarang Anda perlu memastikan bahwa set keterampilan Anda dilampirkan ke sumber daya Layanan Azure AI, jika tidak, Anda akan mencapai kutipan dasar dan pengindeks akan habis. Untuk melakukannya, pilih **Set Keterampilan** di panel kiri, lalu pilih **hotels-sample-skillset** Anda.
+1. Sekarang Anda perlu memastikan bahwa set keterampilan Anda dilampirkan ke sumber daya Layanan Azure AI, jika tidak, Anda akan mencapai kuotasi dasar dan pengindeks akan habis. Untuk melakukannya, pilih **Set Keterampilan** di panel kiri, lalu pilih **hotels-sample-skillset** Anda.
 
     ![Cuplikan layar yang menunjukkan daftar set keterampilan.](../media/08-media/update-skillset.png)
-1. Pilih tab **Layanan AI**, lalu pilih sumber daya layanan AI dalam daftar.
+1. Pilih **Sambungkan Layanan AI**, lalu pilih sumber daya layanan AI di dalam daftar.
 
     ![Cuplikan layar memperlihatkan sumber daya Layanan Azure AI untuk dilampirkan ke set keterampilan.](../media/08-media/skillset-attach-service.png)
 1. Pilih **Simpan**.
@@ -126,5 +126,6 @@ Pengindeks sekarang akan mulai menyerap 50 dokumen. Namun, jika Anda memeriksa s
 
     ![Cuplikan layar memperlihatkan semuanya diselesaikan.](../media/08-media/warnings-fixed-indexer.png)
 
-> [!TIP]
-> Sekarang Anda telah menyelesaikan latihan, jika Anda telah selesai menjelajahi layanan Pencarian Azure AI, hapus sumber daya Azure yang Anda buat selama latihan. Cara termudah untuk melakukannya adalah menghapus grup sumber daya **acs-cognitive-search-exercise**.
+### Pembersihan
+
+ Sekarang Anda telah menyelesaikan latihan, jika Anda telah selesai menjelajahi layanan Pencarian Azure AI, hapus sumber daya Azure yang Anda buat selama latihan. Cara termudah untuk melakukannya adalah menghapus grup sumber daya **acs-cognitive-search-exercise**.

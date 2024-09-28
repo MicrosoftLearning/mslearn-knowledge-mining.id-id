@@ -190,7 +190,7 @@ Hotel ini telah cocok dengan istilah danau di bidang `HotelName` dan dilihat di 
 
     Skor pencarian telah meningkat, dari **0,9433406** menjadi **3,5707965**. Namun, semua hotel lain memiliki skor terhitung lebih tinggi. Hotel ini sekarang berada di urutan terakhir dalam hasil.
 
-## Hapus sumber daya latihan
+## Pembersihan
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan.
 

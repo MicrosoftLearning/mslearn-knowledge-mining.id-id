@@ -127,8 +127,8 @@ Latihan ini menggunakan 210 file teks yang berisi ringkasan plot untuk sebuah fi
 
 1. Di **Nama**, masukkan **movie-genre-classifier**.
 1. Dalam **Bahasa utama teks**, pilih **Bahasa Inggris (AS)**.
-1. Di **Deskripsi**, masukkan **Model yang dapat mengidentifikasi genre film dari ringkasan**.
 1. Pilih **Ya, aktifkan himpunan data multibahasa**.
+1. Di **Deskripsi**, masukkan **Model yang dapat mengidentifikasi genre film dari ringkasan**.
 1. Pilih **Selanjutnya**.
 
     ![Cuplikan layar yang menunjukkan pemilihan kontainer dengan data sampel.](../media/04-media/choose-container.png)
@@ -485,7 +485,7 @@ Setiap dokumen dalam indeks harus memiliki bidang `textclass` baru yang dapat di
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan.
 
-### Hapus sumber daya latihan
+### Pembersihan
 
 1. Di portal Microsoft Azure, pada halaman Beranda, pilih **Grup sumber daya**.
 1. Pilih grup sumber daya yang tidak Anda perlukan, lalu pilih **Hapus grup sumber daya**.
