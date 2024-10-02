@@ -141,22 +141,21 @@ Untuk menerapkan fungsionalitas hitungan kata sebagai keterampilan kustom, Anda 
 > **Catatan**: Dalam latihan ini, Anda akan membuat fungsi Node.JS sederhana menggunakan kemampuan pengeditan kode di portal Microsoft Azure. Dalam solusi produksi, Anda biasanya akan menggunakan lingkungan pengembangan seperti Visual Studio Code untuk membuat aplikasi fungsi dalam bahasa pilihan Anda (misalnya C#, Python, Node.JS, atau Java) dan menerbitkannya ke Azure sebagai bagian dari proses DevOps.
 
 1. Di Portal Microsoft Azure, pada halaman **Beranda**, buat sumber daya **Aplikasi Fungsi** baru dengan pengaturan berikut:
+    - **Paket Hosting**: Konsumsi
     - **Langganan**: *Langganan Anda*
     - **Grup sumber daya**: *Grup sumber daya yang sama dengan sumber daya Pencarian Azure AI Anda*
     - **Nama Aplikasi Fungsi**: *Nama yang unik*
-    - **Terbitkan**: Kode
     - **Tumpukan runtime bahasa umum**: Node.js
     - **Versi**: 18 LTS
     - **Wilayah**: *Wilayah yang sama dengan sumber daya Pencarian Azure AI Anda*
+    - **Sistem Operasi**: Windows
 
 2. Tunggu hingga penyebaran selesai, lalu buka sumber daya Aplikasi Fungsi yang disebarkan.
-3. Di halaman **Gambaran umum** pilih opsi **Buat di portal Azure** untuk membuat fungsi baru dengan pengaturan berikut:
-    - **Menyiapkan lingkungan pengembangan**"
-        - **Lingkungan pengembangan**: Kembangkan di portal
-    - **Pilih templat**"
-        - **Templat**: Pemicu HTTP
+3. Pada halaman **Gambaran Umum** pilih **Buat fungsi** di bagian bawah halaman untuk membuat fungsi baru dengan pengaturan berikut:
+    - **Pilih templat**
+        - **Templat**: Pemicu HTTP    
     - **Detail templat**:
-        - **Fungsi Baru**: wordcount
+        - **Nama fungsi**: wordcount
         - **Tingkat otorisasi**: Fungsi
 4. Tunggu hingga fungsi *wordcount* dibuat. Kemudian di halamannya, pilih tab **Kode + Uji**.
 5. Ganti kode fungsi default dengan kode berikut:
@@ -372,7 +371,7 @@ Sekarang Anda memiliki indeks, Anda dapat mencarinya.
 
     Kueri ini mengambil bidang **url** dan **top_words** untuk semua dokumen yang menyebutkan *Las Vegas*.
 
-## Hapus sumber daya latihan
+## Pembersihan
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Menghapus sumber daya Azure:
 
