@@ -74,3 +74,7 @@ Anda akan melihat kode status dengan tipe **200** untuk menunjukkan bahwa permin
 1. Pilih tab **Isi** untuk melihat respons dan menampilkan hasilnya.
 
 Anda akan melihat kode status dengan tipe **200** untuk permintaan berhasil.
+
+### Pembersihan
+
+Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Mulailah dengan kode yang dikloning ke mesin Anda. Kemudian hapus sumber daya Azure.
