@@ -15,7 +15,7 @@ Dalam latihan ini, Anda akan membuat solusi Azure AI Search, mengimpor beberapa 
 
 Sebelum Anda dapat mulai menggunakan Sesi Debug, Anda perlu membuat layanan Azure Cognitive Search.
 
-1. [Sebarkan sumber daya ke Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmain%2Fazuredeploy.json) - pilih tautan ini untuk menyebarkan semua sumber daya yang Anda butuhkan di portal Azure.
+1. [Sebarkan sumber daya ke Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2Fmslearn-knowledge-mining%2Fmain%2FLabfiles%2F08-debug-search%2Fazuredeploy.json) - pilih tautan ini untuk menyebarkan semua sumber daya yang Anda butuhkan di portal Azure.
 
     ![Cuplikan layar templat penyebaran arm dengan bidang yang dimasukkan.](../media/08-media/arm-template-deployment.png)
 
