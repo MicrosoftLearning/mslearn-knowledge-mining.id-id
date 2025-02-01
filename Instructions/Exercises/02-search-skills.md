@@ -157,6 +157,9 @@ Untuk menerapkan fungsionalitas hitungan kata sebagai keterampilan kustom, Anda 
     - **Detail templat**:
         - **Nama fungsi**: wordcount
         - **Tingkat otorisasi**: Fungsi
+
+    > **Catatan**: Jika Anda menerima kesalahan Membuat Fungsi, silakan refresh halaman, dan sumber dayanya seharusnya telah dibuat seperti yang diharapkan.
+
 4. Tunggu hingga fungsi *wordcount* dibuat. Kemudian di halamannya, pilih tab **Kode + Uji**.
 5. Ganti kode fungsi default dengan kode berikut:
 
