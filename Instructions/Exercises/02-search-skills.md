@@ -146,9 +146,11 @@ Untuk menerapkan fungsionalitas hitungan kata sebagai keterampilan kustom, Anda 
     - **Grup sumber daya**: *Grup sumber daya yang sama dengan sumber daya Pencarian Azure AI Anda*
     - **Nama Aplikasi Fungsi**: *Nama yang unik*
     - **Tumpukan runtime bahasa umum**: Node.js
-    - **Versi**: 18 LTS
+    - **Versi**: 20 LTS
     - **Wilayah**: *Wilayah yang sama dengan sumber daya Pencarian Azure AI Anda*
     - **Sistem Operasi**: Windows
+
+>**Catatan**: Jika wilayah tempat Anda membuat sumber daya Azure AI Search tidak memiliki kuota yang tersedia untuk menyebarkan sumber daya Aplikasi Fungsi, Anda dapat memilih wilayah lain tempat langganan Anda memiliki kuota yang tersedia untuk penyebaran.
 
 2. Tunggu hingga penyebaran selesai, lalu buka sumber daya Aplikasi Fungsi yang disebarkan.
 3. Pada halaman **Gambaran Umum** pilih **Buat fungsi** di bagian bawah halaman untuk membuat fungsi baru dengan pengaturan berikut:
