@@ -27,7 +27,7 @@ Untuk menghemat waktu Anda, pilih templat Azure Resource Manager ini untuk membu
 
     ![Cuplikan layar yang menampilkan semua sumber daya Azure yang disebarkan.](../media/07-media/azure-resources-created.png)
 
-### Menyalin informasi REST API layanan Pencarian Azure AI
+## Menyalin informasi REST API layanan Pencarian Azure AI
 
 1. Dalam daftar sumber daya, pilih layanan pencarian yang Anda buat. Pada contoh di atas, **acs118245-search-service**.
 1. Salin nama layanan pencarian ke dalam file teks.
@@ -35,33 +35,18 @@ Untuk menghemat waktu Anda, pilih templat Azure Resource Manager ini untuk membu
     ![Cuplikan layar bagian kunci dari layanan pencarian.](../media/07-media/search-api-keys-exercise-version.png)
 1. Di sebelah kiri, pilih **Kunci**, lalu salin **Kunci admin utama** ke dalam file teks yang sama.
 
-### Mengunduh kode contoh
+## Mengunduh kode contoh untuk digunakan di Visual Studio Code
 
-Buka Azure Cloud Shell Anda dengan memilih tombol Cloud Shell di bagian atas portal Azure.
-> **Catatan** Jika Anda diminta untuk membuat akun Azure Storage, pilih **Buat penyimpanan**.
+Anda akan menjalankan kode sampel Azure menggunakan Visual Studio Code. File kode telah disediakan dalam repositori GitHub.
 
-1. Setelah selesai memulai, klon contoh repositori kode berikut dengan menjalankan kode berikut di Cloud Shell Anda:
+1. Memulai Visual Studio Code.
+1. Buka palet (SHIFT+CTRL+P) dan jalankan **Git: Perintah klon** untuk mengkloning repositori `https://github.com/MicrosoftLearning/mslearn-knowledge-mining` ke folder lokal (tidak masalah folder mana).
+1. Setelah repositori dikloning, buka folder di Visual Studio Code.
+1. Tunggu sementara file tambahan diinstal untuk mendukung proyek kode C# di repositori.
 
-    ```powershell
-    git clone https://github.com/Azure-Samples/azure-search-dotnet-scale.git samples
-    ```
+    > **Catatan**: Jika Anda diminta untuk menambahkan aset yang diperlukan guna membangun dan men-debug, pilih **Tidak Sekarang**.
 
-1. Ubah ke direktori yang baru dibuat dengan menjalankan:
-
-    ```powershell
-    cd samples
-    ```
-
-1. Kemudian jalankan:
-
-    ```powershell
-    code ./optimize-data-indexing/v11
-    ```
-
-1. Tindakan ini akan membuka editor kode di dalam Cloud Shell di folder `/optimize-data-indexing/v11`.
-
-    ![Cuplikan layar Visual Studio Code yang menampilkan pemberitahuan penyiapan.](../media/07-media/setup-visual-studio-code-solution.png)
-1. Pada navigasi di sebelah kiri, luaskan folder **OptimizeDataIndexing**, lalu pilih file **appsettings.json**.
+1. Pada navigasi di sebelah kiri, perluas folder **optimize-data-indexing/v11/OptimizeDataIndexing**, lalu pilih file **appsettings.json**.
 
     ![Cuplikan layar yang menampilkan konten file appsettings.json.](../media/07-media/update-app-settings.png)
 1. Tempelkan nama layanan pencarian dan kunci admin utama Anda.
@@ -76,36 +61,29 @@ Buka Azure Cloud Shell Anda dengan memilih tombol Cloud Shell di bagian atas por
 
     File pengaturan akan terlihat seperti di atas.
 1. Simpan perubahan dengan menekan **CTRL + S**.
-1. Pilih file **OptimizeDataIndexing.csproj**. <!-- Added this and the next two steps in case we can't update the file in the repo that holds these (seems to be separate from the other labs)-->
-1. Pada baris kelima, ubah `<TargetFramework>netcoreapp3.1</TargetFramework>` menjadi `<TargetFramework>net7.0</TargetFramework>`. <!--- can be removed if no longer needed based on the above-->
-1. Simpan perubahan dengan menekan **CTRL + S**.<!--- can be removed if no longer needed based on the above-->
-1. Di terminal, masukkan `cd ./optimize-data-indexing/v11/OptimizeDataIndexing`. Kemudian, tekan **Enter** untuk mengubahnya ke direktori yang benar.
-1. Pilih file **Program.cs**. Kemudian, di terminal, masukkan `dotnet run` dan tekan **Enter**.
+1. Klik kanan folder **OptimizeDataIndexing**, lalu pilih **Open in Integrated Terminal (Buka di Terminal Terintegrasi)**.
+1. Di terminal, masukkan `dotnet run`, lalu tekan **Enter**.
 
     ![Cuplikan layar yang menampilkan aplikasi yang berjalan di Visual Studio Code dengan pengecualian.](../media/07-media/debug-application.png)
-Output menunjukkan bahwa ukuran batch optimal untuk kasus ini adalah 900 dokumen. Karena mencapai 3,688 MB per detik.
+Output menunjukkan bahwa ukuran batch optimal untuk kasus ini adalah 900 dokumen. Karena mencapai 6,071 MB per detik.
 
-### Edit kode untuk menerapkan utas dan strategi backoff serta coba lagi
+## Edit kode untuk menerapkan utas dan strategi backoff serta coba lagi
 
 Ada kode yang dikomentari yang siap mengubah aplikasi untuk menggunakan utas untuk mengunggah dokumen ke indeks pencarian.
 
 1. Pastikan Anda telah memilih **Program.cs**.
 
     ![Cuplikan layar Visual Studio Code yang menampilkan file Program.cs.](../media/07-media/edit-program-code.png)
-1. Komentari baris 38 dan 39 seperti ini:
+1. Beri komentar pada baris 37 dan 38 seperti ini:
 
     ```csharp
     //Console.WriteLine("{0}", "Finding optimal batch size...\n");
     //await TestBatchSizesAsync(searchClient, numTries: 3);
     ```
 
-1. Batalkan komentar pada baris 41 hingga 49.
+1. Batalkan komentar pada baris 44 hingga 48.
 
     ```csharp
-    long numDocuments = 100000;
-    DataGenerator dg = new DataGenerator();
-    List<Hotel> hotels = dg.GetHotels(numDocuments, "large");
-
     Console.WriteLine("{0}", "Uploading using exponential backoff...\n");
     await ExponentialBackoff.IndexDataAsync(searchClient, hotels, 1000, 8);
 
@@ -122,7 +100,6 @@ Ada kode yang dikomentari yang siap mengubah aplikasi untuk menggunakan utas unt
 1. Pilih terminal Anda, lalu tekan tombol apa pun untuk mengakhiri proses yang sedang berjalan jika Anda belum melakukannya.
 1. Jalankan `dotnet run` di terminal.
 
-    ![Cuplikan layar yang menampilkan pesan selesai di konsol.](../media/07-media/upload-hundred-thousand-documents.png)
     Aplikasi akan memulai delapan utas, dan ketika setiap utas selesai menulis pesan baru ke konsol:
 
     ```powershell
@@ -162,7 +139,7 @@ Anda dapat mencari dan memverifikasi bahwa dokumen telah ditambahkan ke indeks d
 
 ![Cuplikan layar yang menampilkan indeks pencarian dengan 100.000 dokumen.](../media/07-media/check-search-service-index.png)
 
-### Pembersihan
+## Pembersihan
 
 Sekarang setelah Anda menyelesaikan latihan, hapus semua sumber daya yang tidak lagi Anda perlukan. Mulailah dengan kode yang dikloning ke mesin Anda. Kemudian hapus sumber daya Azure.
 
