@@ -35,20 +35,47 @@ Untuk menghemat waktu Anda, pilih templat Azure Resource Manager ini untuk membu
     ![Cuplikan layar bagian kunci dari layanan pencarian.](../media/07-media/search-api-keys-exercise-version.png)
 1. Di sebelah kiri, pilih **Kunci**, lalu salin **Kunci admin utama** ke dalam file teks yang sama.
 
-## Mengunduh kode contoh untuk digunakan di Visual Studio Code
+## Kloning repositori ke Cloud Shell Anda.
 
-Anda akan menjalankan kode sampel Azure menggunakan Visual Studio Code. File kode telah disediakan dalam repositori GitHub.
+Anda akan mengembangkan kode menggunakan Cloud Shell dari portal Azure. File kode untuk aplikasi Anda telah disediakan dalam repositori GitHub.
 
-1. Memulai Visual Studio Code.
-1. Buka palet (SHIFT+CTRL+P) dan jalankan **Git: Perintah klon** untuk mengkloning repositori `https://github.com/MicrosoftLearning/mslearn-knowledge-mining` ke folder lokal (tidak masalah folder mana).
-1. Setelah repositori dikloning, buka folder di Visual Studio Code.
-1. Tunggu sementara file tambahan diinstal untuk mendukung proyek kode C# di repositori.
+> **Tips**: Jika Anda telah mengkloning repo **mslearn-knowledge-mining** baru-baru ini, Anda dapat melewati tugas ini. Jika belum melakukannya, ikuti langkah-langkah berikut untuk mengkloningnya ke lingkungan pengembangan Anda.
 
-    > **Catatan**: Jika Anda diminta untuk menambahkan aset yang diperlukan guna membangun dan men-debug, pilih **Tidak Sekarang**.
+1. Gunakan tombol **[\>_]** di sebelah kanan bilah pencarian di bagian atas halaman untuk membuat Cloud Shell baru di portal Azure, dengan memilih lingkungan ***PowerShell***. Cloud shell menyediakan antarmuka baris perintah dalam panel di bagian bawah portal Azure.
 
-1. Pada navigasi di sebelah kiri, perluas folder **optimize-data-indexing/v11/OptimizeDataIndexing**, lalu pilih file **appsettings.json**.
+    > **Catatan**: Jika sebelumnya Anda telah membuat cloud shell yang menggunakan lingkungan *Bash* , alihkan ke ***PowerShell***.
+
+1. Di toolbar cloud shell, di menu **Pengaturan**, pilih **Buka versi Klasik** (ini diperlukan untuk menggunakan editor kode).
+
+    > **Tips**: Saat Anda menempelkan perintah ke cloudshell, ouput mungkin mengambil sejumlah besar buffer layar. Anda dapat menghapus layar dengan memasukkan `cls` perintah untuk mempermudah fokus pada setiap tugas.
+
+1. Di panel PowerShell, masukkan perintah berikut untuk mengkloning repositori GitHub untuk latihan ini:
+
+    ```
+    rm -r mslearn-knowledge-mining -f
+    git clone https://github.com/microsoftlearning/mslearn-knowledge-mining mslearn-knowledge-mining
+    ```
+
+1. Setelah repositori dikloning, navigasikan ke folder yang berisi file kode aplikasi:  
+
+    ```
+   cd mslearn-knowledge-mining/Labfiles/07-exercise-add-to-index-use-push-api/OptimizeDataIndexing
+    ```
+
+## Menyiapkan aplikasi Anda
+
+1.  Dengan menggunakan `ls` perintah , Anda dapat melihat konten folder **OptimizeDataIndexing**. Perhatikan bahwa ini berisi `appsettings.json` file untuk pengaturan konfigurasi.
+
+1. Masukkan perintah berikut untuk mengedit file konfigurasi yang telah disediakan:
+
+    ```
+   code appsettings.json
+    ```
+
+    File dibuka dalam editor kode.
 
     ![Cuplikan layar yang menampilkan konten file appsettings.json.](../media/07-media/update-app-settings.png)
+
 1. Tempelkan nama layanan pencarian dan kunci admin utama Anda.
 
     ```json
@@ -60,30 +87,40 @@ Anda akan menjalankan kode sampel Azure menggunakan Visual Studio Code. File kod
     ```
 
     File pengaturan akan terlihat seperti di atas.
-1. Simpan perubahan dengan menekan **CTRL + S**.
-1. Klik kanan folder **OptimizeDataIndexing**, lalu pilih **Open in Integrated Terminal (Buka di Terminal Terintegrasi)**.
+   
+1. Setelah Anda mengganti tempat penampung, gunakan perintah **CTRL+S** untuk menyimpan perubahan Anda lalu gunakan perintah **CTRL+Q** untuk menutup editor kode sambil menjaga baris perintah cloud shell tetap terbuka.
 1. Di terminal, masukkan `dotnet run`, lalu tekan **Enter**.
 
     ![Cuplikan layar yang menampilkan aplikasi yang berjalan di Visual Studio Code dengan pengecualian.](../media/07-media/debug-application.png)
-Output menunjukkan bahwa ukuran batch optimal untuk kasus ini adalah 900 dokumen. Karena mencapai 6,071 MB per detik.
+
+    Output menunjukkan bahwa dalam kasus ini, ukuran batch dengan performa terbaik adalah 900 dokumen dengan kecepatan transfer tertinggi (MB/Detik).
+   
+    >**Catatan**: Nilai laju transfer Anda mungkin berbeda dari apa yang ditampilkan dalam tangkapan layar. Namun, ukuran batch berkinerja terbaik harus tetap sama. 
 
 ## Edit kode untuk menerapkan utas dan strategi backoff serta coba lagi
 
 Ada kode yang dikomentari yang siap mengubah aplikasi untuk menggunakan utas untuk mengunggah dokumen ke indeks pencarian.
 
-1. Pastikan Anda telah memilih **Program.cs**.
+1. Masukkan perintah berikut untuk membuka file kode untuk aplikasi klien:
 
-    ![Cuplikan layar Visual Studio Code yang menampilkan file Program.cs.](../media/07-media/edit-program-code.png)
-1. Beri komentar pada baris 37 dan 38 seperti ini:
+    ```
+   code Program.cs
+    ```
+
+1. Komentari baris 38 dan 39 seperti ini:
 
     ```csharp
     //Console.WriteLine("{0}", "Finding optimal batch size...\n");
     //await TestBatchSizesAsync(searchClient, numTries: 3);
     ```
 
-1. Batalkan komentar pada baris 44 hingga 48.
+1. Batalkan komentar pada baris 41 hingga 49.
 
     ```csharp
+    long numDocuments = 100000;
+    DataGenerator dg = new DataGenerator();
+    List<Hotel> hotels = dg.GetHotels(numDocuments, "large");
+
     Console.WriteLine("{0}", "Uploading using exponential backoff...\n");
     await ExponentialBackoff.IndexDataAsync(searchClient, hotels, 1000, 8);
 
@@ -94,9 +131,10 @@ Ada kode yang dikomentari yang siap mengubah aplikasi untuk menggunakan utas unt
     Kode yang mengontrol ukuran batch dan jumlah utas adalah `await ExponentialBackoff.IndexDataAsync(searchClient, hotels, 1000, 8)`. Ukuran batch adalah 1000 dan utasnya delapan.
 
     ![Cuplikan layar yang menampilkan semua kode yang diedit.](../media/07-media/thread-code-ready.png)
+
     Kode Anda akan terlihat seperti di atas.
 
-1. Simpan perubahan Anda, tekan **CTRL**+**S**.
+1. Simpan perubahan Anda.
 1. Pilih terminal Anda, lalu tekan tombol apa pun untuk mengakhiri proses yang sedang berjalan jika Anda belum melakukannya.
 1. Jalankan `dotnet run` di terminal.
 
