@@ -83,29 +83,29 @@ Portal Microsoft Azure mengasumsikan bidang pertama dalam dokumen perlu diterjem
 
 1. Di bagian atas halaman, pilih layanan pencarian, tautan**advanced-search-service-12345 |Indeks**.
 1. Pilih **Skillsets** di bawah Manajemen pencarian di panel kiri, lalu pilih **hotels-sample-skillset**.
-1. Edit dokumen JSON, ubah baris 11 menjadi:
+1. Edit dokumen JSON, ubah baris 9 menjadi:
 
     ```json
     "context": "/document/Description",
     ```
 
-1. Ubah default dari bahasa ke bahasa Inggris pada baris 12:
+1. Ubah default dari bahasa ke bahasa Inggris pada baris 11:
 
     ```json
     "defaultFromLanguageCode": "en",
     ```
 
-1. Ubah bidang sumber pada baris 18 menjadi:
+1. Ubah bidang sumber pada baris 15 menjadi:
 
     ```json
-    "source": "/document/Description"
+    "source": "/document/Description",
     ```
 
 1. Pilih **Simpan**.
 1. Di bagian atas halaman, pilih layanan pencarian, **advanced-search-service-12345 | Skillsets** link.
 1. Pada panel **Gambaran umum**, pilih **Indeks**, lalu pilih **hotels-sample-indexer**.
-1. Pilih **Definisi Pengindeks (JSON)**.
-1. Ubah nama bidang sumber pada baris 21 menjadi:
+1. Pilih **Edit JSON**.
+1. Ubah nama bidang sumber pada baris 20 menjadi:
 
     ```json
     "sourceFieldName": "/document/Description/Description_pt",
