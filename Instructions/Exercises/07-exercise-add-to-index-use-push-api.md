@@ -15,7 +15,7 @@ Dalam latihan ini, Anda akan mengkloning solusi C# yang ada dan menjalankannya u
 
 Untuk menghemat waktu Anda, pilih templat Azure Resource Manager ini untuk membuat sumber daya yang Anda perlukan nanti dalam latihan:
 
-1. [Sebarkan sumber daya ke Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2Fmslearn-knowledge-mining%2Fmain%2FLabfiles%2F07-exercise-add-to-index-use-push-api%20lab-files%2Fazuredeploy.json) - pilih tautan ini untuk membuat sumber daya Azure AI Anda.
+1. [Sebarkan sumber daya ke Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2Fmslearn-knowledge-mining%2Fmain%2FLabfiles%2F07-exercise-add-to-index-use-push-api%2Fazuredeploy.json) - pilih tautan ini untuk membuat sumber daya Azure AI Anda.
     ![Cuplikan layar opsi yang ditampilkan saat menyebarkan sumber daya ke Azure.](../media/07-media/deploy-azure-resources.png)
 1. Di **Grup sumber daya**, pilih ** Buat baru **, beri nama **cog-search-language-exe **.
 1. Di **Wilayah**, pilih [wilayah yang didukung](/azure/ai-services/language-service/custom-text-classification/service-limits#regional-availability) yang dekat dengan Anda.
